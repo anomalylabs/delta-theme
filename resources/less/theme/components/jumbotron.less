@@ -1,0 +1,55 @@
+.jumbotron {
+    margin-bottom: 0 !important;
+}
+
+.jumbotron.jumbotron-red {
+    background-color: @red;
+}
+
+.jumbotron.jumbotron-smoke {
+    background-color: @smoke;
+
+    * {
+        color: @gray;
+    }
+}
+
+.jumbotron.jumbotron-white {
+    background-color: #ffffff;
+
+    p,
+    div {
+        color: @text-muted;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: @headings-color;
+    }
+}
+
+.jumbotron.jumbotron-gray {
+    background-color: @gray;
+}
+
+.jumbotron.jumbotron-gray-dark {
+    background-color: @gray-dark;
+}
+
+.jumbotron-red,
+.jumbotron-gray,
+.jumbotron-gray-dark {
+    * {
+        color: #ffffff;
+    }
+
+    a, a:hover {
+        color: #ffffff;
+    }
+}
+
+.jumbotron.jumbotron-small {
+    padding-top: @jumbotron-padding/1.5;
+    padding-bottom: @jumbotron-padding/1.5;
+}

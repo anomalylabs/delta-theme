@@ -17,8 +17,14 @@
 
 <body>
 
+{% include "theme::partials/header" %}
+{#{% include "theme::partials/masthead" %}#}
+{% include "theme::partials/slider" %}
+{% include "theme::partials/showcase" %}
+
 {% block content %}{% endblock %}
 
+{% include "theme::partials/footer" %}
 {% include "theme::partials/js" %}
 
 </body>
