@@ -27,5 +27,12 @@ class DeltaThemeServiceProvider extends AddonServiceProvider
                 return view('theme::hello');
             }
         );
+
+        $router->any(
+            'documentation',
+            function () {
+                return view('theme::documentation');
+            }
+        );
     }
 }
