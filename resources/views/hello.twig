@@ -3,6 +3,9 @@
 {% block content %}
 
     {% include "theme::partials/slider" %}
+
+    HERE: {{ partial('test_partial', 'homie') }}
+
     {% include "theme::partials/showcase" %}
 
 {% endblock %}
