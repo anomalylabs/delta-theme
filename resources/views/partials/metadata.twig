@@ -23,7 +23,7 @@
 {{ asset_style("theme.css") }}
 
 {% for style in asset_styles("styles.css") %}
-    {{ style }}
+    {{ style|raw }}
 {% endfor %}
 
 {{ html_script(asset_path("theme.js")) }}

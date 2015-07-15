@@ -21,7 +21,7 @@ class DeltaThemeServiceProvider extends AddonServiceProvider
      */
     public function map(Router $router)
     {
-        $router->any(
+        /*$router->any(
             '/',
             function () {
                 return view('theme::hello');
@@ -40,6 +40,6 @@ class DeltaThemeServiceProvider extends AddonServiceProvider
             function () {
                 return view('theme::documentation');
             }
-        );
+        );*/
     }
 }
