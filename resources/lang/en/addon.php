@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'name'        => 'Delta',
+    'title'       => 'Delta',
+    'name'        => 'Delta Theme',
     'description' => 'The official public theme for Streams Platform products from AnomalyLabs.'
 ];
