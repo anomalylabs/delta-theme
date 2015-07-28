@@ -1,3 +1,5 @@
+{{ html_script(asset_path("theme.js")) }}
+
 {% for script in asset_scripts("scripts.js") %}
     {{ script|raw }}
 {% endfor %}
