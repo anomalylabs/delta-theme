@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
-<title>{{ config_get('streams::distribution.name') }} &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
+<title>{{ config_get('streams::distribution.name') }} &#8250; {{ template.meta_title }}</title>
+
+<meta name="description" content="{{ template.meta_description }}">
+<meta name="keywords" content="{{ template.meta_keywords|join(', ') }}">
 
 <!-- Favicon -->
 {#<link rel="icon" type="image/x-icon" href="{{ image_url('theme::img/favicon.png') }}">
