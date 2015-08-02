@@ -30,6 +30,16 @@ h5 a {
     }
 }
 
+div[class*="col-"] {
+    > h1:first-child,
+    > h2:first-child,
+    > h3:first-child,
+    > h4:first-child,
+    > h5:first-child {
+        line-height: 1;
+    }
+}
+
 pre {
     margin-bottom: @line-height-computed;
 }
