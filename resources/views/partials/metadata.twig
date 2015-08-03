@@ -11,9 +11,9 @@
 <meta name="keywords" content="{{ template.meta_keywords|join(', ') }}">
 
 <!-- Favicon -->
-{#<link rel="icon" type="image/x-icon" href="{{ image_url('theme::img/favicon.png') }}">
-<link rel="shortcut icon" type="image/x-icon" href="{{ image_url('theme::img/favicon.png') }}">
-<link rel="apple-touch-icon" href="{{ image_url('theme::img/favicon.png') }}"/>#}
+<link rel="icon" type="image/x-icon" href="{{ image_url('public::favicon.png') }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ image_url('public::favicon.png') }}">
+<link rel="apple-touch-icon" href="{{ image_url('public::favicon.png') }}"/>
 
 {{ asset_add("theme.css", "theme::less/bootstrap/bootstrap.less") }}
 {{ asset_add("theme.css", "theme::less/fonts/fonts.less", ["parse"]) }}
