@@ -1,0 +1,41 @@
+{% for post in posts %}
+    <article class="post col-lg-6 tile">
+
+        <header>
+
+            <h1 class="tile-header"><a href="{{ url(post.path) }}">{{ post.title }}</a></h1>
+
+            <div class="meta">
+
+                <span class="author">
+                    {{ post.author.display_name }}
+                </span>
+
+                <time class="date" datetime="{{ post.publish_at.iso }}">
+                    {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+                </time>
+
+                {% if post.category %}
+                    <span class="category">
+                    {{ html_link(post.category.path, post.category.name) }}
+                </span>
+                {% endif %}
+
+                {% if post.tags %}
+                    <span class="tags">
+                    {{ post.tags.labels|raw }}
+                </span>
+                {% endif %}
+
+            </div>
+
+        </header>
+
+        <div class="excerpt">
+            {% if post.excerpt %}
+                <p>{{ post.excerpt|raw }}</p>
+            {% endif %}
+        </div>
+
+    </article>
+{% endfor %}

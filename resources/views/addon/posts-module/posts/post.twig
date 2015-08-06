@@ -1,0 +1,49 @@
+{% extends post.type.theme_layout ?: "theme::layouts/default" %}
+
+{% block content %}
+    <div id="posts">
+        <article id="post">
+
+            <div class="jumbotron jumbotron-red text-center">
+                <header class="container">
+                    <h1>{{ post.title }}</h1>
+                </header>
+            </div>
+
+            <div class="meta container text-center">
+
+                <div class="author">
+
+                    <img src="https://gravatar.com/avatar/{{ md5(post.author.email) }}" class="img-rounded">
+
+                    <div class="name">
+                        <strong>{{ post.author.display_name }}</strong>
+                    </div>
+
+                </div>
+
+                <time class="date text-muted" datetime="{{ post.publish_at.iso }}">
+                    {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+                </time>
+
+                {% if post.category %}
+                    <span class="category">
+                            {{ html_link(post.category.path, post.category.name) }}
+                        </span>
+                {% endif %}
+
+                {% if post.tags %}
+                    <span class="tags">
+                            {{ post.tags.labels|raw }}
+                        </span>
+                {% endif %}
+
+            </div>
+
+            <div class="content container">
+                {{ post.content|raw }}
+            </div>
+
+        </article>
+    </div>
+{% endblock %}
