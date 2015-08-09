@@ -1,0 +1,42 @@
+{% for post in posts %}
+    <article class="post">
+
+        <header>
+
+            <h2>
+                <a href="{{ url(post.path) }}">
+                    {{ post.title }}
+                    <small> in {{ html_link(post.category.path, post.category.name) }}</small>
+                </a>
+            </h2>
+
+            <div class="meta text-muted">
+
+                <strong>
+                    <time class="date" datetime="{{ post.publish_at.iso }}">
+                        {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+                    </time>
+                </strong>
+
+                <span class="author">
+                    by {{ post.author.display_name }}
+                </span>
+
+            </div>
+
+        </header>
+
+        <div class="summary">
+            {% if post.summary %}
+                <p>{{ post.summary|nl2br|raw }}</p>
+            {% endif %}
+
+            {% if post.tags %}
+                <span class="tags">
+                        {{ post.tag_links|raw }}
+                    </span>
+            {% endif %}
+        </div>
+
+    </article>
+{% endfor %}
