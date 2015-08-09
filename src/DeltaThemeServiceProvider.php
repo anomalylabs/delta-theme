@@ -19,9 +19,11 @@ class DeltaThemeServiceProvider extends AddonServiceProvider
      * @var array
      */
     protected $overrides = [
-        'anomaly.module.posts::posts/post'     => 'theme::addon/posts-module/posts/post',
-        'anomaly.module.posts::posts/index'    => 'theme::addon/posts-module/posts/index',
-        'anomaly.module.posts::partials/posts' => 'theme::addon/posts-module/partials/posts'
+        'anomaly.module.posts::posts/post'               => 'theme::addon/posts-module/posts/post',
+        'anomaly.module.posts::posts/index'              => 'theme::addon/posts-module/posts/index',
+        'anomaly.module.posts::partials/posts'           => 'theme::addon/posts-module/partials/posts',
+        'anomaly.extension.recent_posts_block::block'    => 'theme::addon/recent_posts_block-extension/block',
+        'anomaly.extension.post_categories_block::block' => 'theme::addon/post_categories_block-extension/block'
     ];
 
 }

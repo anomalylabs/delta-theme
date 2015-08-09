@@ -1,0 +1,7 @@
+<ul class="list-unstyled">
+    {% for category in posts_categories() %}
+        <li>
+            {{ html_link(category.path, category.title) }}
+        </li>
+    {% endfor %}
+</ul>

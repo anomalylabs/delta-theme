@@ -1,0 +1,7 @@
+<ul class="list-unstyled">
+    {% for post in posts_recent({'limit': block.entry.limit.value}) %}
+        <li>
+            {{ html_link(post.path, post.title) }}
+        </li>
+    {% endfor %}
+</ul>
