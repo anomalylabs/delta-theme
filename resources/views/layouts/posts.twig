@@ -21,7 +21,19 @@
 {% include "theme::partials/messages" %}
 
 <div class="container">
-    {% block content %}{% endblock %}
+    <div class="row">
+
+        <div class="col-lg-18">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div class="col-lg-6">
+            {{ blocks_render('categories') }}
+            {{ blocks_render('recent-posts') }}
+            {{ blocks_render('featured-posts') }}
+        </div>
+
+    </div>
 </div>
 
 {% include "theme::partials/footer" %}
