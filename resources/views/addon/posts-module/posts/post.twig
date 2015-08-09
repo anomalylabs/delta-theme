@@ -28,14 +28,14 @@
 
                 {% if post.category %}
                     <span class="category">
-                            {{ html_link(post.category.path, post.category.name) }}
-                        </span>
+                        in {{ html_link(post.category.path, post.category.name) }}
+                    </span>
                 {% endif %}
 
                 {% if post.tags %}
-                    <span class="tags">
-                            {{ post.tags.labels|raw }}
-                        </span>
+                    <div class="tags">
+                        {{ post.tag_links|raw }}
+                    </div>
                 {% endif %}
 
             </div>
